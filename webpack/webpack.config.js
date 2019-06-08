@@ -1,6 +1,7 @@
-const path = require('path');
-const autoprefixer = require("autoprefixer");
-var glob = require("glob")
+const path = require('path')
+const autoprefixer = require('autoprefixer')
+const glob = require('glob')
+const webpack = require('webpack')
 
 module.exports = {
   entry: glob.sync('./src/**.js'),
@@ -22,18 +23,17 @@ module.exports = {
       }
     ]
   },
-  // plugins: [
-  //   new webpack.LoaderOptionsPlugin({
-  //     options: {
-  //       postcss: [
-  //         autoprefixer(),
-  //       ]
-  //     }
-  //   })
-  // ],
-  // optimization: {
-  //   minimizer: [
-  //     new UglifyJsPlugin()
-  //   ]
-  // } 
+  plugins: [
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        postcss: [
+          autoprefixer(),
+        ]
+      }
+    }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+  })
+  ]
 }
