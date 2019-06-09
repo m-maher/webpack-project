@@ -1,13 +1,11 @@
 
-// import './cssFiles/index-style.css'
-// import './cssFiles/bootstrap.min.css'
-// import './cssFiles/owl.carousel.css'
-// import './cssFiles/owl.theme.default.css'
-// import './cssFiles/slick.css'
-// import './cssFiles/slick-theme.css'
+import '../node_modules/jquery/dist/jquery.min.js';
+import '../node_modules/popper.js/dist/umd/popper.min.js';
+import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
+// import '../node_modules/slick-carousel/slick/slick.min.js';
+// import '../node_modules/owl.carousel/dist/owl.carousel.js';
 
-// import 'slick-carousel';
-// import 'owl.carousel';
+import './cssFiles/style.css'
 
 //Button Up
 

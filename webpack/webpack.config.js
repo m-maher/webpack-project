@@ -5,7 +5,8 @@ const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: glob.sync('./src/**.js'),
+  // entry: glob.sync('./src/**.js'),
+  entry : './src/mine.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -21,10 +22,7 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        use: [
-          { loader: MiniCssExtractPlugin.loader },
-          { loader: 'css-loader' }
-        ]
+        loader: 'css-loader'
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|gif)(\?v=\d+\.\d+\.\d+)?$/,
