@@ -1,9 +1,19 @@
 
+// import './cssFiles/index-style.css'
+// import './cssFiles/bootstrap.min.css'
+// import './cssFiles/owl.carousel.css'
+// import './cssFiles/owl.theme.default.css'
+// import './cssFiles/slick.css'
+// import './cssFiles/slick-theme.css'
+
+// import 'slick-carousel';
+// import 'owl.carousel';
+
 //Button Up
 
 $(document).ready(function(){
     $("#btnUp").click(function(){
-        $("body").animate({scrollTop:'0'},1000);         
+        $("body").animate({scrollTop:'0'},1000);           
     }) 
 })
 
