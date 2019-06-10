@@ -1,11 +1,7 @@
 const path = require('path')
-const autoprefixer = require('autoprefixer')
-const glob = require('glob')
 const webpack = require('webpack')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  // entry: glob.sync('./src/**.js'),
   entry : './src/mine.js',
   output: {
     filename: 'bundle.js',
@@ -15,36 +11,24 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
-      },
-      {
         test: /\.css$/,
-        exclude: /node_modules/,
-        loader: 'css-loader'
+        use: [ 'style-loader', 'css-loader' ]
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|gif)(\?v=\d+\.\d+\.\d+)?$/,
-        exclude: /node_modules/,
-        use: [ 
-          { loader: 'file-loader' }
-        ]
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ['file-loader']
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: ['file-loader']
       }
     ]
   },
   plugins: [
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        postcss: [
-          autoprefixer(),
-        ]
-      }
-    }),
     new webpack.ProvidePlugin({
       $: "jquery",
-      jQuery: "jquery"
+      jQuery: "jquery",
+      'window.jQuery': 'jquery'
     }),
-    new MiniCssExtractPlugin()
   ]
 }

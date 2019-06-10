@@ -1,13 +1,19 @@
+import $ from 'jquery'
 
-import '../node_modules/jquery/dist/jquery.min.js';
-import '../node_modules/popper.js/dist/umd/popper.min.js';
-import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
-// import '../node_modules/slick-carousel/slick/slick.min.js';
-// import '../node_modules/owl.carousel/dist/owl.carousel.js';
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.css'
 
-import './cssFiles/style.css'
+import 'slick-carousel'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
-//Button Up
+import 'owl.carousel'
+import 'owl.carousel/dist/assets/owl.carousel.css'
+import 'owl.carousel/dist/assets/owl.theme.default.css'
+
+import './style.css'
+
+//Button Up 
 
 $(document).ready(function(){
     $("#btnUp").click(function(){
@@ -151,17 +157,6 @@ $(document).ready(function(){
         }
     })
 })
-
-// Google Map
-
-function myMap() {
-    var mapOptions = {
-        center: new google.maps.LatLng(51.5, -0.12),
-        zoom: 10,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
-  var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-}
 
 // Contact Form
 

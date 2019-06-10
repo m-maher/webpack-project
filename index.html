@@ -2,15 +2,8 @@
 <head>
   <title>Website</title>
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">  
-  <link rel="stylesheet" href="index-style.css">
-  <!-- <link rel="stylesheet" href="css/slick.css">
-  <link rel="stylesheet" href="css/slick-theme.css">
-  <link rel="stylesheet" href="css/owl.carousel.css">
-  <link rel="stylesheet" href="css/owl.theme.default.css"> -->
   <link rel="stylesheet" href="css/fontawesome.all.min.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
@@ -868,16 +861,20 @@
 
 <!-- End of Social Section -->
   
-  <!-- <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/slick.min.js"></script>
-  <script src="js/owl.carousel.js"></script> 
-  <script src="mine.js"></script> -->
   <script src="./webpack/dist/bundle.js"></script>
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAndFqevHboVWDN156vJqXk1Y1-D7QR7BE&callback=myMap"></script>
+  <script>
+    function myMap() {
+      var mapOptions = {
+          center: new google.maps.LatLng(51.5, -0.12),
+          zoom: 10,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
+  </script>
 
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAndFqevHboVWDN156vJqXk1Y1-D7QR7BE&callback=myMap"></script>
 
 </body>
 </html> 
