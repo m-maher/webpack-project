@@ -1,5 +1,9 @@
 import $ from 'jquery'
 
+import './style.css'
+
+require('./styleSass.scss')
+
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
 
@@ -11,13 +15,11 @@ import 'owl.carousel'
 import 'owl.carousel/dist/assets/owl.carousel.css'
 import 'owl.carousel/dist/assets/owl.theme.default.css'
 
-import './style.css'
-
 //Button Up 
 
 $(document).ready(function(){
     $("#btnUp").click(function(){
-        $("body").animate({scrollTop:'0'},1000);           
+        $("body").animate({scrollTop:'0'},1000);            
     }) 
 })
 

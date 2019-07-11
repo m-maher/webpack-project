@@ -40,7 +40,7 @@ p{
     left: 50%;
     opacity: 0;
     animation: pulsate 1s ease-out;
-    animation-iteration-count: infinite;
+    animation-iteration-count:infinite;
 }
 @keyframes pulsate {
     0% {
@@ -65,7 +65,7 @@ p{
 	transition: all 0.3s;
 	padding: 15px; 
 }
-.navbar .navbar-brand{
+.navbar .navbar-brand{ 
 	margin-left: 100px;
 }
 @media(max-width:700px){
