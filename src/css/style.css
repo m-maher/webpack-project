@@ -1,3 +1,4 @@
+
 body{
 	font-family: 'Raleway', sans-serif;
 }
@@ -39,7 +40,7 @@ p{
     left: 50%;
     opacity: 0;
     animation: pulsate 1s ease-out;
-    animation-iteration-count: infinite;
+    animation-iteration-count:infinite;
 }
 @keyframes pulsate {
     0% {
@@ -64,7 +65,7 @@ p{
 	transition: all 0.3s;
 	padding: 15px; 
 }
-.navbar .navbar-brand{
+.navbar .navbar-brand{ 
 	margin-left: 100px;
 }
 @media(max-width:700px){
@@ -96,15 +97,15 @@ p{
 	position: relative;
 }
 .home .item1 {
-    background-image: url('images/slider1.jpg');
+    background-image: url('../images/slider1.jpg');
     background-size: cover; 
 }
 .home .item2{
-	background-image: url('images/slider2.jpg');
+	background-image: url('../images/slider2.jpg');
     background-size: cover; 
 }
 .home .item3{
-	background-image: url('images/slider3.jpg');
+	background-image: url('../images/slider3.jpg');
     background-size: cover; 
 }
 .home .arrow-next button{
@@ -244,7 +245,7 @@ p{
 /* Start of Process Section */
 
 .process{
-	background-image: url('images/process.jpg');
+	background-image: url('../images/process.jpg');
 	background-attachment: fixed;
 	background-size: cover;
 }
@@ -339,7 +340,7 @@ p{
 /* Start of Clients Section */
 
 .clients{
-	background-image: url('images/bg.jpg');
+	background-image: url('../images/bg.jpg');
 	background-size: cover;
 	background-attachment: fixed;
 	height: 750px;

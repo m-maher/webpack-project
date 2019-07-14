@@ -2,9 +2,10 @@ const path = require('path')
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const WebpackRTLPlugin = require('webpack-rtl-plugin')
+const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 
 module.exports = {
-  entry : './src/mine.js',
+  entry : './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -14,7 +15,10 @@ module.exports = {
     rules: [
       {
         test: /\.(css|scss)$/,
-        use: [ MiniCssExtractPlugin.loader, "css-loader", "sass-loader" ]
+        use: [ MiniCssExtractPlugin.loader,"css-loader", "sass-loader", {
+          loader: 'postcss-loader',
+          options: { plugins: () => require('autoprefixer') }
+        }]
       },
       {
         test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf|otf)$/,
@@ -33,6 +37,7 @@ module.exports = {
     }),
     new WebpackRTLPlugin({
       filename: 'style.rtl.css'
-    })
+    }),
+    new UnminifiedWebpackPlugin()
   ]
 }
